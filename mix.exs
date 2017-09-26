@@ -3,8 +3,8 @@ defmodule Identicon.Mixfile do
 
   def project do
     [app: :identicon,
-     version: "0.1.0",
-     elixir: "~> 1.4",
+     version: "0.1.1",
+     elixir: "~> 1.5",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps()]
@@ -28,6 +28,6 @@ defmodule Identicon.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [{:egd, github: "erlang/egd"}]
   end
 end
